@@ -1,10 +1,100 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-      
+        <title>Joseph's Amazing Website</title>
+        <style>
+            body {
+                background: rgb(125, 198, 205);
+                color: rgb(45, 45, 45);
+                padding: 10px;
+                font-family: arial;
+            }
+            #all-contents {
+                max-width: 800px;
+                margin: auto;
+            }
+        
+            /* navigation menu */
+            nav {
+                background: rgb(239, 80, 41);
+                margin: 0 auto;
+                display: flex;
+                padding: 10px;
+            }
+            nav h1 {
+                display: flex;
+                align-items: center;
+                color: white;
+                flex: 1;
+                margin: 0;
+                margin-bottom: 20px;
+            }
+            nav ul {
+                list-style-image: none;
+            }
+            nav li {
+                display: inline-block;
+                padding: 0 10px;
+            }
+            nav a {
+                text-decoration: none;
+                color: #fff;
+            }
+        
+            /* main container area beneath menu */
+            main {
+                background: rgb(245, 238, 219);
+                display: flex;
+            }
+            .sidebar {
+                margin-right: 25px;
+                padding: 10px;
+            }
+            .sidebar img {
+                width: 200px;
+            }
+            .content {
+                flex: 1;
+                padding: 15px;
+            }
+            h2, h3 {
+                margin: 0px;
+            }
+        </style>
     </head>
     
     <body>
-      
+        <div id="all-contents"> 
+            <nav>
+                <h1>Joseph's Amazing Website</h1>
+                <ul>
+                    <li>
+                      <a href="index.html"> Home </a>
+                    </li>
+                    <li>
+                      <a href="portfolio.html"> Portfolio </a>
+                  </li>
+                </ul>
+            </nav>
+    
+            <main>
+                <div class="sidebar">
+                    <img src=data:image/png;base64,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>
+                </div>
+            
+                <div class="content">
+                  <h2>Joseph</h2>
+                  <p>Student at OpSpark</p>
+                  <div id="interests">
+                    <h3>Interests</h3>
+                    <ul>
+                        <li>Eating pizza.</li>
+                        <li>Playing games.</li>
+                        <li>Watching videos.</li>
+                    </ul>
+                </div>
+                </div>
+            </main>
+        </div>
     </body>
 </html>
